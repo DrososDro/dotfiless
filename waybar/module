@@ -1,0 +1,200 @@
+{
+
+    "hyprland/workspaces": {
+       // "disable-scroll": true,
+       // "all-outputs": true,
+       // "on-click": "activate",
+       // "persistent_workspaces": {
+       //     "1": [],
+       //     "2": [],
+       //     "3": [],
+       //     "4": [],
+       //     "5": [],
+       //     "6": [],
+       //     "7": [],
+       //     "8": [],
+       //     "9": [],
+       //     "10": []
+       // }
+    },
+    "hyprland/window": {
+        "format": "{}"
+    },
+
+    "tray": {
+	"icon-size": 15,
+	"spacing": 5
+   },
+   "clock": {
+    	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    	"format": "{:%a %d, %b \n %H:%M }",
+    	"format-alt": "{:%Y-%m-%d}"
+   },
+   "memory": {
+    	"format": "󰍛 {}%",
+    	"format-alt": "󰍛 {used}/{total} GiB",
+    	"interval": 1
+   },
+   "disk": {
+  	"interval": 30,
+  	//"format": "󰋊",
+  	"path": "/",
+  	"format-alt": "{used} used out of {total} on {path} ({percentage_used}%)",
+  	"format": "󰋊 {percentage_free}%",
+  	//"tooltip": true,
+  	"tooltip-format": "used {percentage_used}%)",
+   },
+   "cpu": {
+    	"format": "󰻠 {usage}%",
+    	"format-alt": "󰻠 {avg_frequency} GHz",
+    	"interval": 1
+    },
+    "network": {
+        "format-wifi": "{icon}",
+        "format-ethernet": "ﯱ",
+        "format-disconnected": "󰤭",
+        "tooltip-format": "{essid}",
+       // "on-click": "~/.config/waybar/scripts/rofi_network",
+       "on-click": "nm-connection-editor",
+        "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    },
+"pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+
+        
+    "custom/power-menu": {
+        "format": " ⏻ ",
+	"on-click": "exec wlogout",
+	"tooltip" : false,
+    }, 
+    "hyprland/language": {
+     	"format": "{}",
+      	"format-en": "US",
+      	"format-np": "NP",
+      	"tooltip": "false",
+    },
+    "custom/title": {
+     	"format": "<b>{}</b>",
+     	"interval": 1,
+     	"exec": "hyprctl activewindow | grep class | awk '{print $2}'",
+     	"tooltip": false,
+    },
+    "custom/CpuTemp":{
+  	"exec": "~/.config/waybar/scripts/heatSensors",
+  	"interval": 10,
+  	"format": "{}",
+	"tooltip": false,  
+    },
+    "custom/launcher": {
+        "format": "",
+        "on-click": "exec wofi",
+     	"tooltip": false,
+    },
+
+    "custom/launch_firefox": {
+        "format": "",
+        "on-click": "firefox",
+        "tooltip": false
+    },
+
+    "custom/launch_telegram": {
+        "format": "",
+        "on-click": "telegram-desktop",
+        "tooltip": false
+    },
+
+    "custom/launch_thunar": {
+        "format": "",
+        "on-click": "exec thunar",
+        "tooltip": false
+    },
+
+    "custom/launch_foot": {
+        "format": "",
+        "on-click": "exec foot",
+        "tooltip": false
+    },
+    
+    "custom/launch_code": {
+        "format": " ",
+        "on-click": "exec vscodium",
+        "tooltip": false
+    },
+
+    "custom/launch_spotify": {
+        "format": "󰓇",
+        "on-click": "exec spotify",
+        "tooltip": false
+    },
+
+    "hyprland/taskbar": {
+        "format": "{icon}",
+        "icon-size": 24,
+        "all-outputs": true,
+        "tooltip-format": "{name} - {title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+            "wofi"
+        ],
+     },
+"mpd": {
+        "tooltip": true,
+        "tooltip-format": "{artist} - {album} - {title} - Total Time : {totalTime:%M:%S}",
+        "format": " {elapsedTime:%M:%S}",
+        "format-disconnected": "⚠  Disconnected",
+        "format-stopped": " Not Playing",
+        "on-click": "mpc toggle",
+        "state-icons": {
+            "playing": "",
+                "paused": ""
+        }
+    },
+    "mpd#2": {
+        "format": "",
+        "format-disconnected": "",
+        "format-paused": "",
+        "format-stopped": "",
+        // Commands to execute on events
+        "on-click": "mpc -q pause && mpc -q prev && mpc -q start",
+    },
+    "mpd#3": {
+        "interval": 1,
+        "format": "{stateIcon}",
+        "format-disconnected": "",
+        "format-paused": "{stateIcon}",
+        "format-stopped": "",
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        // Commands to execute on events
+        "on-click": "mpc toggle",
+    },
+    "mpd#4": {
+        "format": "",
+        "format-disconnected": "",
+        "format-paused": "",
+        "format-stopped": "",
+        // Commands to execute on events
+        "on-click": "mpc -q pause && mpc -q next && mpc -q start",
+    },
+
+
+}

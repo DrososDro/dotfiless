@@ -1,0 +1,55 @@
+[{
+    "include": "~/.config/waybar/module",
+    "layer": "top",
+    "exclusive": true,
+    "passthrough": false,
+    "position": "top",
+    "fixed-center": true,
+    "ipc": true,
+    "gtk-layer-shell": true,
+
+    "modules-left": ["hyprland/workspaces",
+	"custom/launcher",
+	"custom/left", 
+	"cpu", 
+	"custom/CpuTemp", 
+	"memory", 
+	"disk",
+	"custom/right", 
+	"hyprland/language",
+    ],
+
+    "modules-center": ["hyprland/window"],
+
+    "modules-right": ["tray", 
+	"network", 
+	"pulseaudio", 
+	"clock",
+    "custom/power-menu",
+    ],
+
+   
+}]
+
+
+//{
+//    "include": "~/.config/waybar/module",
+//    "layer": "top",
+//    "position": "bottom",
+//    "mod": "dock",
+//    "fixed-center": true,
+//    "exclusive": true,
+//    "passthrough": false,
+//    "gtk-layer-shell": true,
+//    "modules-left": [
+//        "custom/launch_firefox",
+//        "custom/launch_telegram",
+//        "custom/launch_foot",
+//        "custom/launch_thunar",
+//	"custom/launch_code",
+//	"custom/launch_spotify"
+//    ],
+//    "modules-center": ["hyprland/taskbar"],
+//    "modules-right": ["custom/weather", "custom/power-menu"],
+//
+//}]
