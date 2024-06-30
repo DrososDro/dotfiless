@@ -1,8 +1,8 @@
 *
-!terminator
-!hypr
-!dunst
+!terminator/
+!hypr/
+!dunst/
 !.gitignore
-!waybar
-!wofi
+!waybar/
+!wofi/
 
