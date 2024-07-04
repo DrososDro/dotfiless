@@ -1,23 +1,15 @@
 [Pacman -S]
-git firefox dunst neofetch terminator waybar wofi keepassxc ntfs-3g nautilus 
-networkmanager zsh ttf-meslo-nerd ttf-bitstream-vera ttf-croscore ttf-dejavu 
-npm pyenv python-pipenv ttf-nerd-font-symbols network-manager-applet swaybg
- noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
-wl-clipboard telegram-desktop discord
-lua unzip tree-sitter fd ripgrep gnome-theme-extra pavucontrol qt5ct qt6ct
-xdg-desktop-portal-hyprland
-nwg-look
+git firefox dunst neofetch terminator waybar wofi keepassxc ntfs-3g nautilus networkmanager zsh ttf-meslo-nerd ttf-bitstream-vera ttf-croscore ttf-dejavu npm pyenv python-pipenv ttf-nerd-fonts-symbols network-manager-applet swaybg noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra wl-clipboard telegram-desktop discord lua unzip tree-sitter fd ripgrep gnome-themes-extra pavucontrol qt5ct qt6ct xdg-desktop-portal-hyprland nwg-look
+gnome-terminal docker docker-compose docker-buildx
 
 
-
-
+[paru]
+paru
+wlogout
 
 [Pacman -Rns]
 dolphin polkit
 htop kitty
-
-
-
 
 [rm -rf]
 .config dolphinrc kitty
@@ -26,12 +18,14 @@ htop kitty
 
 
 
+[systemctl]
 systemctl enable --now NetworkManager
 systemctl --user enable --now ssh-agent.service
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 
 
+[for Zsh]
 wget sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
